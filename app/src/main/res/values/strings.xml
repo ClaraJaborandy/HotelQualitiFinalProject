@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Rede de Hoteis Qualiti</string>
+    <string-array name="static_spinner">
+        <item>Hotel Jardim Botânico</item>
+        <item>Hotel Parque das Flores</item>
+        <item>Hotel Mar Atlântico</item>
+        <item>Hotel Qualiti Premium</item>
+    </string-array>
+
+</resources>
