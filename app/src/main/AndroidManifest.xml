@@ -9,8 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HotelQualitiFinalProject">
-        <activity android:name=".ReservationScreen"></activity>
-        <activity android:name=".DetailsActivity" />
+        <activity android:name=".ReservationScreenTwo"
+            android:parentActivityName=".ReservationScreen"></activity>
+        <activity
+            android:name=".ReservationScreen"
+            android:parentActivityName=".DetailsActivity" />
+        <activity
+            android:name=".DetailsActivity"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

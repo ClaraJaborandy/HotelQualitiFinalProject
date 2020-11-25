@@ -50,6 +50,7 @@ public class RecentHotelsAdapter extends RecyclerView.Adapter<RecentHotelsAdapte
             @Override
             public void onClick(View view) {
                 Intent i= new Intent(context, DetailsActivity.class);
+                i.putExtra("identificadorHotel", recentHotelsDataList.get(position));
                 context.startActivity(i);
             }
         });

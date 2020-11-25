@@ -2,7 +2,10 @@ package com.example.hotelqualitifinalproject.model;
 
 import androidx.annotation.IntegerRes;
 
-public class RecentHotelsData {
+import java.io.Serializable;
+
+public class RecentHotelsData implements Serializable {
+    //PESQUISAR!
 
     String nomeHotel;
     String cidadeHotel;
