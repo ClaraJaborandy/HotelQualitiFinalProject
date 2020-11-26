@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import com.example.hotelqualitifinalproject.adapter.RecentHotelsAdapter;
 import com.example.hotelqualitifinalproject.model.RecentHotelsData;
@@ -55,4 +56,4 @@ public class MainActivity extends AppCompatActivity {
             recentHotelsAdapter = new RecentHotelsAdapter(this, recentHotelsDataList);
             recentHotel.setAdapter(recentHotelsAdapter);
         }
-    }
+}
