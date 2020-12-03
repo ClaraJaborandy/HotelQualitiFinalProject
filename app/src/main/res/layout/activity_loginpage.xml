@@ -20,8 +20,8 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="324dp"
-        android:layout_height="338dp"
+        android:layout_width="330dp"
+        android:layout_height="383dp"
         android:layout_marginTop="31dp"
         android:layout_marginBottom="124dp"
         android:scaleType="fitXY"
@@ -30,13 +30,14 @@
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.222"
         app:srcCompat="@drawable/card_bg" />
 
     <EditText
         android:id="@+id/editTextTextPassword2"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginBottom="164dp"
+        android:layout_marginBottom="220dp"
         android:drawableLeft="@drawable/ic_baseline_lock_24"
         android:ems="10"
         android:fontFamily="@font/montserrat"
@@ -61,7 +62,7 @@
         android:hint=" Nome de usuário"
         android:inputType="textPersonName"
         android:textColor="#838282"
-        android:textColorHint="ACACAC"
+        android:textColorHint="#838282"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword2"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
         app:layout_constraintHorizontal_bias="0.504"
@@ -78,21 +79,21 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2"
-        app:layout_constraintVertical_bias="0.275" />
+        app:layout_constraintVertical_bias="0.151" />
 
     <TextView
         android:id="@+id/registerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:clickable="true"
         android:outlineProvider="none"
         android:singleLine="false"
         android:text="Não possui uma conta? Registre-se aqui!"
-        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintVertical_bias="0.213" />
 
     <TextView
         android:id="@+id/textView2"

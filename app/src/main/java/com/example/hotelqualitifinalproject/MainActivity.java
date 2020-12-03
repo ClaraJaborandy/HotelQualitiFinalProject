@@ -3,11 +3,14 @@ package com.example.hotelqualitifinalproject;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import com.example.hotelqualitifinalproject.adapter.RecentHotelsAdapter;
@@ -35,17 +38,10 @@ public class MainActivity extends AppCompatActivity {
 
         setRecentHotel(recentHotelsDataList);
 
-        Spinner staticSpinner = (Spinner) findViewById(R.id.static_spinner);
-
         ArrayAdapter<CharSequence> staticAdapter = ArrayAdapter
                 .createFromResource(this, R.array.static_spinner,
                         android.R.layout.simple_spinner_item);
 
-        staticAdapter
-                .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        staticSpinner.setAdapter(staticAdapter);
-        staticSpinner.setPrompt("Escolha o Hotel");
     }
 
         private void setRecentHotel(List<RecentHotelsData> recentHotelsDataList){
@@ -56,4 +52,11 @@ public class MainActivity extends AppCompatActivity {
             recentHotelsAdapter = new RecentHotelsAdapter(this, recentHotelsDataList);
             recentHotel.setAdapter(recentHotelsAdapter);
         }
+
+        public void setDateIn(View view){
+            startActivity(new Intent(MainActivity.this, ReservationScreen.class));
+                }
+
+
+
 }

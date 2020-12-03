@@ -3,7 +3,9 @@ package com.example.hotelqualitifinalproject;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.CalendarView;
 import android.widget.TextView;
 
@@ -19,7 +21,7 @@ public class ReservationScreen extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        calendarView1 = (CalendarView) findViewById(R.id.calendarView1);
+        calendarView1 = (CalendarView) findViewById(R.id.startDate);
         textView6 = (TextView) findViewById(R.id.textView6);
 
         calendarView1.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
@@ -29,7 +31,8 @@ public class ReservationScreen extends AppCompatActivity {
                 textView6.setText(date);
             }
         });
-
-
+    }
+    public void setDateOut (View v){
+        startActivity(new Intent(ReservationScreen.this, ReservationScreenTwo.class));
     }
 }
