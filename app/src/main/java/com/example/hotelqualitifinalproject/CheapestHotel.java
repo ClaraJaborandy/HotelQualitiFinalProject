@@ -13,10 +13,10 @@ public class CheapestHotel extends AppCompatActivity {
 
     ArrayList<Hoteis> listaHoteis = new ArrayList<>(
             Arrays.asList(
-                    new Hoteis("Hotel Qualiti Premium", "Dubai, EAU", 50.00, 100.00, 80.00, 150.00),
-                    new Hoteis("Jardim Botânico", "Gravatá, PE", 50.00, 70.00, 80.00, 105.00),
-                    new Hoteis("Parque das Flores", "Natal, RN", 50.00, 75.00, 80.00, 150.00),
-                    new Hoteis("Mar Atlântico", "Tamandaré, PE", 50.00, 80.00, 80.00, 130.00)
+                    new Hoteis("Hotel Qualiti Premium", "Dubai, EAU", 50, 100, 80, 150, R.drawable.qualitipremium),
+                    new Hoteis("Jardim Botânico", "Gravatá, PE", 50, 70, 80, 105, R.drawable.jardimbotanico),
+                    new Hoteis("Parque das Flores", "Natal, RN", 50, 75, 80, 150, R.drawable.parquedasflores),
+                    new Hoteis("Mar Atlântico", "Tamandaré, PE", 50, 80, 80, 130, R.drawable.maratlantico)
             ));
 
     @Override
@@ -26,7 +26,7 @@ public class CheapestHotel extends AppCompatActivity {
 
 
         ListView cheapestHotelList = findViewById(R.id.cheapestHotelList);
-        ArrayAdapter gerenciador = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listaHoteis);
+        CheapestHotelsAdapter gerenciador = new CheapestHotelsAdapter(this, R.layout.item_view, listaHoteis);
         cheapestHotelList.setAdapter(gerenciador);
     }
 }

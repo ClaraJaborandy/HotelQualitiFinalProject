@@ -4,21 +4,27 @@ public class Hoteis {
 
     private String name;
     private String city;
-    private Double priceWeekFid;
-    private Double priceWeekNorm;
-    private Double priceWeekendFid;
-    private Double priceWeekendNorm;
+    private Integer priceWeekFid;
+    private Integer priceWeekNorm;
+    private Integer priceWeekendFid;
+    private Integer priceWeekendNorm;
+    private Integer imageSource;
 
     public Hoteis() {
     }
 
-    public Hoteis(String name, String city, Double priceWeekFid, Double priceWeekNorm, Double priceWeekendFid, Double priceWeekendNorm) {
+    public Hoteis(String name, String city, Integer priceWeekFid, Integer priceWeekNorm, Integer priceWeekendFid, Integer priceWeekendNorm, Integer imageSource) {
         this.name = name;
         this.city = city;
         this.priceWeekFid = priceWeekFid;
         this.priceWeekNorm = priceWeekNorm;
         this.priceWeekendFid = priceWeekendFid;
         this.priceWeekendNorm = priceWeekendNorm;
+        this.imageSource = imageSource;
+    }
+
+    public Integer getImageSource() {
+        return imageSource;
     }
 
     public String getName() {
@@ -37,36 +43,43 @@ public class Hoteis {
         this.city = city;
     }
 
-    public Double getPriceWeekFid() {
+    public int getPriceWeekFid() {
         return priceWeekFid;
     }
 
-    public void setPriceWeekFid(Double priceWeekFid) {
+    public void setPriceWeekFid(Integer priceWeekFid) {
         this.priceWeekFid = priceWeekFid;
     }
 
-    public Double getPriceWeekNorm() {
+    public int getPriceWeekNorm() {
         return priceWeekNorm;
     }
 
-    public void setPriceWeekNorm(Double priceWeekNorm) {
+    public void setPriceWeekNorm(Integer priceWeekNorm) {
         this.priceWeekNorm = priceWeekNorm;
     }
 
-    public Double getPriceWeekendFid() {
+    public int getPriceWeekendFid() {
         return priceWeekendFid;
     }
 
-    public void setPriceWeekendFid(Double priceWeekendFid) {
+    public void setPriceWeekendFid(Integer priceWeekendFid) {
         this.priceWeekendFid = priceWeekendFid;
     }
 
-    public Double getPriceWeekendNorm() {
+    public int getPriceWeekendNorm() {
         return priceWeekendNorm;
     }
 
-    public void setPriceWeekendNorm(Double priceWeekendNorm) {
+    public void setPriceWeekendNorm(Integer priceWeekendNorm) {
         this.priceWeekendNorm = priceWeekendNorm;
     }
+
+    @Override
+    public String toString(){
+        return name;
+    }
+
+
 }
 
