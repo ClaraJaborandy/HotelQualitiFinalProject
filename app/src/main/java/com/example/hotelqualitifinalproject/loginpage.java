@@ -1,11 +1,17 @@
 package com.example.hotelqualitifinalproject;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 public class loginpage extends AppCompatActivity {
+
+
+    TextView adminLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +23,8 @@ public class loginpage extends AppCompatActivity {
         registerbutton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                //criar uma ação pro botão
-            }
+                startActivity(new Intent(loginpage.this, RegisterPage.class));
+                }
         });
     }
 }

@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HotelQualitiFinalProject">
+        <activity android:name=".HomeAdmin"></activity>
+        <activity android:name=".Finished" />
         <activity
             android:name=".CheapestHotel"
             android:label="@string/title_activity_cheapest_hotel">
@@ -22,7 +24,6 @@
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
         -->
-
         <activity android:name=".EditProfile" />
         <activity android:name=".RegisterPage" />
         <activity android:name=".loginpage" />
