@@ -1,83 +1,70 @@
 package com.example.hotelqualitifinalproject;
 
+import java.util.Date;
+
 public class Hoteis {
 
-    private String name;
-    private String city;
-    private Integer priceWeekFid;
-    private Integer priceWeekNorm;
-    private Integer priceWeekendFid;
-    private Integer priceWeekendNorm;
-    private Integer imageSource;
+    private String nameHotel;
+    private String dateCheckIn;
+    private String dateCheckOut;
+    private Double totalStay;
+    private Integer imageView7;
 
     public Hoteis() {
     }
 
-    public Hoteis(String name, String city, Integer priceWeekFid, Integer priceWeekNorm, Integer priceWeekendFid, Integer priceWeekendNorm, Integer imageSource) {
-        this.name = name;
-        this.city = city;
-        this.priceWeekFid = priceWeekFid;
-        this.priceWeekNorm = priceWeekNorm;
-        this.priceWeekendFid = priceWeekendFid;
-        this.priceWeekendNorm = priceWeekendNorm;
-        this.imageSource = imageSource;
+    public String getNameHotel() {
+        return nameHotel;
     }
 
-    public Integer getImageSource() {
-        return imageSource;
+    public void setNameHotel(String nameHotel) {
+        this.nameHotel = nameHotel;
     }
 
-    public String getName() {
-        return name;
+    public String getDateCheckIn() {
+        return dateCheckIn;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDateCheckIn(String dateCheckIn) {
+        this.dateCheckIn = dateCheckIn;
     }
 
-    public String getCity() {
-        return city;
+    public String getDateCheckOut() {
+        return dateCheckOut;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setDateCheckOut(String dateCheckOut) {
+        this.dateCheckOut = dateCheckOut;
     }
 
-    public int getPriceWeekFid() {
-        return priceWeekFid;
+    public Double getTotalStay() {
+        return totalStay;
     }
 
-    public void setPriceWeekFid(Integer priceWeekFid) {
-        this.priceWeekFid = priceWeekFid;
+    public void setTotalStay(Double totalStay) {
+        this.totalStay = totalStay;
     }
 
-    public int getPriceWeekNorm() {
-        return priceWeekNorm;
+    public Integer getImageView7() {
+        return imageView7;
     }
 
-    public void setPriceWeekNorm(Integer priceWeekNorm) {
-        this.priceWeekNorm = priceWeekNorm;
+    public void setImageView7(Integer imageView7) {
+        this.imageView7 = imageView7;
     }
 
-    public int getPriceWeekendFid() {
-        return priceWeekendFid;
-    }
+    public Hoteis(String nameHotel, String dateCheckIn, String dateCheckOut, Double totalStay, Integer imageView7) {
+        this.nameHotel = nameHotel;
+        this.dateCheckIn = dateCheckIn;
+        this.dateCheckOut = dateCheckOut;
+        this.totalStay = totalStay;
+        this.imageView7 = imageView7;
 
-    public void setPriceWeekendFid(Integer priceWeekendFid) {
-        this.priceWeekendFid = priceWeekendFid;
-    }
-
-    public int getPriceWeekendNorm() {
-        return priceWeekendNorm;
-    }
-
-    public void setPriceWeekendNorm(Integer priceWeekendNorm) {
-        this.priceWeekendNorm = priceWeekendNorm;
     }
 
     @Override
     public String toString(){
-        return name;
+        return nameHotel;
     }
 
 

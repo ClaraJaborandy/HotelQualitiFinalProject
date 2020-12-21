@@ -30,23 +30,18 @@ public class RecentHotelsData implements Serializable {
     public String getNomeHotel() {
         return nomeHotel;
     }
-
     public void setNomeHotel(String nomeHotel) {
         this.nomeHotel = nomeHotel;
     }
-
     public String getCidadeHotel() {
         return cidadeHotel;
     }
-
     public void setCidadeHotel(String cidadeHotel) {
         this.cidadeHotel = cidadeHotel;
     }
-
     public String getPrecoDesde() {
         return precoDesde;
     }
-
     public void setPrecoDesde(String precoDesde) {
         this.precoDesde = precoDesde;
     }

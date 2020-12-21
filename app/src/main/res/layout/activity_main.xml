@@ -11,10 +11,10 @@
         android:layout_width="424dp"
         android:layout_height="210dp"
         android:layout_marginBottom="5dp"
-        android:background="@drawable/topbarprofile"
+        android:background="@drawable/sliceone"
         app:layout_constraintBottom_toTopOf="@+id/searchoffer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -54,14 +54,14 @@
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="328dp"
             android:layout_marginBottom="30dp"
             android:background="@null"
+            android:onClick="profileButton"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toTopOf="@+id/textView"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/profilepic" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -95,6 +95,7 @@
         android:layout_width="355dp"
         android:layout_height="45dp"
         android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/ic_baseline_search_24"
         android:onClick="setDateIn"
         android:text="PESQUISAR A MELHOR OFERTA"
         app:layout_constraintBottom_toTopOf="@+id/textView5"

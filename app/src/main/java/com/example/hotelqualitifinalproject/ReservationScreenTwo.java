@@ -19,6 +19,10 @@ public class ReservationScreenTwo extends AppCompatActivity {
     public void goToHotelsList (View view){
         Intent intent = new Intent(this, CheapestHotel.class);
         startActivity(intent);
-
     }
+
+    //public void clickTemporario (View v) {
+    //    Intent intent = new Intent(this, loginpage.class);
+    //    startActivity(intent);
+    //}
 }

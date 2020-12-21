@@ -1,18 +1,15 @@
 package com.example.hotelqualitifinalproject;
 
 import android.content.Context;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import java.util.Date;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -42,26 +39,23 @@ public class CheapestHotelsAdapter extends ArrayAdapter<Hoteis> {
 
         Hoteis hotel = hoteisArrayList.get(position);
 
-        ImageView imageView = itemView.findViewById(R.id.imageView7);
-
         TextView nameHotel = itemView.findViewById(R.id.namehotel);
-        nameHotel.setText(hotel.getName());
+        nameHotel.setText(String.valueOf(hotel.getNameHotel()));
 
-        TextView localizacao = itemView.findViewById(R.id.city);
-        localizacao.setText(hotel.getCity());
+        TextView dateCheckIn = itemView.findViewById(R.id.dateCheckIn);
+        dateCheckIn.setText(String.valueOf(hotel.getDateCheckIn()));
 
-        TextView priceweekfid = itemView.findViewById(R.id.priceWeekFidelity);
-        priceweekfid.setText(hotel.getPriceWeekFid());
+        TextView dateCheckOut = itemView.findViewById(R.id.dateCheckOut);
+        dateCheckOut.setText(String.valueOf(hotel.getDateCheckOut()));
 
-        TextView priceweekendfid = itemView.findViewById(R.id.textView22);
-        priceweekendfid.setText(hotel.getPriceWeekendFid());
+        TextView totalStay = itemView.findViewById(R.id.totalStay);
+        totalStay.setText(String.valueOf(hotel.getTotalStay()));
 
-        TextView priceweeknorm = itemView.findViewById(R.id.textView26);
-        priceweeknorm.setText(hotel.getPriceWeekNorm());
+        ImageView imageView7 = itemView.findViewById(R.id.imageView7);
+        imageView7.setImageResource(hotel.getImageView7());
 
-        TextView priceweekendnorm = itemView.findViewById(R.id.textView27);
-        priceweekendnorm.setText(hotel.getPriceWeekendNorm());
-
+        //Button button4 = itemView.findViewById(R.id.button4);
+        //button4.setOnClickListener(CheapestHotel.this, ReservationScreen.class);
 
         return itemView;
 

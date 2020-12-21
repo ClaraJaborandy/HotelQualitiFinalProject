@@ -1,17 +1,19 @@
 package com.example.hotelqualitifinalproject;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
 import android.view.View;
 import android.widget.TextView;
 
 public class loginpage extends AppCompatActivity {
-
-
-    TextView adminLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +22,25 @@ public class loginpage extends AppCompatActivity {
 
         TextView registerbutton =(TextView) findViewById(R.id.registerButton);
 
-        registerbutton.setOnClickListener(new View.OnClickListener() {
+        String text = "Não possui uma conta? Registre-se aqui!";
 
-            public void onClick(View v) {
-                startActivity(new Intent(loginpage.this, RegisterPage.class));
-                }
-        });
+        SpannableString ss = new SpannableString(text);
+
+        ClickableSpan clickableSpan = new ClickableSpan() {
+            @Override
+            public void onClick(@NonNull View view) {
+                Intent intent = new Intent(loginpage.this, RegisterPage.class);
+                startActivity(intent);
+            }
+        };
+        ss.setSpan(clickableSpan, 22, 38, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        registerbutton.setText(ss);
+        registerbutton.setMovementMethod(LinkMovementMethod.getInstance());
+    }
+
+    public void reservationButton (View v) {
+        Intent intent = new Intent(this, ReservationOptions.class);
+        startActivity(intent);
     }
 }

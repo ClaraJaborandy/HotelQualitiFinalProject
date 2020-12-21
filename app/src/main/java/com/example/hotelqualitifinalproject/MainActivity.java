@@ -55,7 +55,16 @@ public class MainActivity extends AppCompatActivity {
 
         public void setDateIn(View view){
             startActivity(new Intent(MainActivity.this, ReservationScreen.class));
-                }
+    }
+
+    ImageButton imageButton;
+    public void profileButton(View view){
+    imageButton = (ImageButton) findViewById(R.id.imageButton);
+        Intent intent = new Intent(MainActivity.this, EditProfile.class);
+        startActivity(intent);
+
+    }
+
 
 
 
