@@ -24,9 +24,13 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginBottom="24dp"
         android:fontFamily="@font/montserrat"
         android:text="Veja aqui os detalhes da sua reserva:"
+        app:layout_constraintBottom_toTopOf="@+id/imageView11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,7 +38,7 @@
         android:id="@+id/imageView11"
         android:layout_width="334dp"
         android:layout_height="315dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.454"
@@ -88,9 +92,11 @@
         android:id="@+id/textView35"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
         android:fontFamily="@font/montserrat"
         android:text="Check-out:"
         app:layout_constraintBottom_toTopOf="@+id/textHotelDescription"
+        app:layout_constraintEnd_toStartOf="@+id/editTextDate4"
         app:layout_constraintStart_toStartOf="@+id/textView33"
         app:layout_constraintTop_toBottomOf="@+id/textView32" />
 
@@ -126,9 +132,11 @@
         android:id="@+id/textView37"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="9dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="Total:"
         app:layout_constraintBottom_toTopOf="@+id/textHotelDescription"
+        app:layout_constraintEnd_toStartOf="@+id/textView38"
         app:layout_constraintStart_toStartOf="@+id/textView33"
         app:layout_constraintTop_toBottomOf="@+id/textView35" />
 
@@ -160,8 +168,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="35dp"
         android:text="Enviar por e-mail"
         app:layout_constraintBottom_toBottomOf="@+id/button8"
+        app:layout_constraintEnd_toStartOf="@+id/button8"
         app:layout_constraintStart_toStartOf="@+id/imageView11"
         app:layout_constraintTop_toBottomOf="@+id/imageView11" />
 
@@ -170,7 +180,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:layout_marginBottom="206dp"
         android:text="download"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageView11"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/button6"

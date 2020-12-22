@@ -28,7 +28,7 @@ public interface GuestService {
     Call<List<Guest>> saveGuest();
 
     @Update
-    @PUT("hotelRepository")
+    @POST("hotelRepository")
     Call<List<Guest>> updateGuest();
 
     @DELETE("HotelRepository")

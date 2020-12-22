@@ -34,7 +34,7 @@ public interface AccommodationService {
     Call<List<Accommodation>> saveAccommodation();
 
     @Update
-    @PUT("AccommodationRepository")
+    @POST("AccommodationRepository")
     Call<List<Accommodation>> updateAccommodation();
 
     @DELETE("AccommodationRepository")

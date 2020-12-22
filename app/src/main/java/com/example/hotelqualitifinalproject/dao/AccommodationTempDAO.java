@@ -1,4 +1,4 @@
-package com.example.hotelqualitifinalproject.dao;
+//package com.example.hotelqualitifinalproject.dao;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -10,24 +10,24 @@ import com.example.hotelqualitifinalproject.ReservationScreen;
 
 import java.util.List;
 
-    @Dao
-    interface ReservationTempDAO {
+    //@Dao
+    //interface ReservationTempDAO {
 
-        @Query("SELECT * FROM AccommodationTempDAO")
-        public List<AccommodationDAO> getAll();
+      //  @Query("SELECT * FROM AccommodationTempDAO")
+       // public List<AccommodationDAO> getAll();
 
-        @Query("SELECT * FROM")
-        public List<ReservationScreenTwo> getAllReservationScreenTwo();
+        //@Query("SELECT * FROM")
+        //public List<ReservationScreenTwo> getAllReservationScreenTwo();
 
-        @Insert(onConflict = OnConflictStrategy.REPLACE)
-        public void insertAll(List<ReservationScreenTwo>reservationScreenTwo);
+        //@Insert(onConflict = OnConflictStrategy.REPLACE)
+        //public void insertAll(List<ReservationScreenTwo>reservationScreenTwo);
 
-        @Insert(onConflict = OnConflictStrategy.REPLACE)
-        public void insertProductOrder(ReservationTempDAO reservationTempDAO);
+        //@Insert(onConflict = OnConflictStrategy.REPLACE)
+        //public void insertProductOrder(ReservationTempDAO reservationTempDAO);
 
-        @Query("DELETE FROM AccommodationTempDAO")
-        public void deleteAll();
+        //@Query("DELETE FROM AccommodationTempDAO")
+        //public void deleteAll();
 
-        @Delete
-        public void deleteProduct(ReservationTempDAO reservationTempDAO);
-    }
+        //@Delete
+        //public void deleteProduct(ReservationTempDAO reservationTempDAO);
+    //}
