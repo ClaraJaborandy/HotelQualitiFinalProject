@@ -1,4 +1,4 @@
-package com.example.hotelqualitifinalproject;
+package com.example.hotelqualitifinalproject.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,6 +10,9 @@ import android.widget.TextView;
 import java.util.Date;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import com.example.hotelqualitifinalproject.Hoteis;
+import com.example.hotelqualitifinalproject.R;
 
 import java.util.ArrayList;
 

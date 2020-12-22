@@ -13,17 +13,27 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.Toast;
+
 import com.example.hotelqualitifinalproject.adapter.RecentHotelsAdapter;
+import com.example.hotelqualitifinalproject.model.Hotel;
 import com.example.hotelqualitifinalproject.model.RecentHotelsData;
+import com.example.hotelqualitifinalproject.repository.RetrofitConfig;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.RecursiveAction;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView recentHotel;
     RecentHotelsAdapter recentHotelsAdapter;
+    ArrayList<Hotel> listHotel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +75,24 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    RetrofitConfig retrofitConfig = new RetrofitConfig();
+    Call<List<Hotel>> call = retrofitConfig.getHotelService().getAllHotels();
+    call.enqueue(new Callback<List<Hotel>>(){
+        @Override
+        public void onResponse(Call<List<Hotel>> call, Response<List<Hotel>> response) {
+        List<Hotel> hotels = response.body();
+
+        String name = hotels.get(0).getName();
+        Toast.makeText(this, "Hotel" + name, Toast.LENGTH_LONG).show();
+        }
+
+        @Override
+        public void onFailure(Call<List<Hotel>> call, Throwable t){
+        Toast.makeText(MainActivity.this, "Hotel não encontrado", Toast.LENGTH_LONG).show();
+    }}
+    }
 
 
 
-}
+
+
