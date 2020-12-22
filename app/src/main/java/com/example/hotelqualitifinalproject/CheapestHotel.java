@@ -15,13 +15,6 @@ import java.util.Arrays;
 
 public class CheapestHotel extends AppCompatActivity {
 
-    //ArrayList<Hoteis> listaHoteis = new ArrayList<>(
-    //        Arrays.asList(
-    //                new Hoteis("Qualiti Premium", "Dubai, EAU", 50, 100, 80, 150, R.drawable.qualitipremium),
-    //                new Hoteis("Jardim Botânico", "Gravatá, PE", 50, 70, 80, 105, R.drawable.jardimbotanico),
-    //                new Hoteis("Parque das Flores", "Natal, RN", 50, 75, 80, 150, R.drawable.parquedasflores),
-    //                new Hoteis("Mar Atlântico", "Tamandaré, PE", 50, 80, 80, 130, R.drawable.maratlantico)
-    //        ));
 
     ArrayList<Hoteis> listaHoteis = new ArrayList<>(
             Arrays.asList(

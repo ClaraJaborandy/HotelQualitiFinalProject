@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     RecyclerView recentHotel;
     RecentHotelsAdapter recentHotelsAdapter;
-    ArrayList<Hotel> listHotel;
+    ArrayList<Hotel> hotels;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,47 +51,31 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<CharSequence> staticAdapter = ArrayAdapter
                 .createFromResource(this, R.array.static_spinner,
                         android.R.layout.simple_spinner_item);
-
     }
 
-        private void setRecentHotel(List<RecentHotelsData> recentHotelsDataList){
+    private void setRecentHotel(List<RecentHotelsData> recentHotelsDataList) {
 
-            recentHotel = findViewById(R.id.recent_recycler);
-            RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
-            recentHotel.setLayoutManager(layoutManager);
-            recentHotelsAdapter = new RecentHotelsAdapter(this, recentHotelsDataList);
-            recentHotel.setAdapter(recentHotelsAdapter);
-        }
+        recentHotel = findViewById(R.id.recent_recycler);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
+        recentHotel.setLayoutManager(layoutManager);
+        recentHotelsAdapter = new RecentHotelsAdapter(this, recentHotelsDataList);
+        recentHotel.setAdapter(recentHotelsAdapter);
+    }
 
-        public void setDateIn(View view){
-            startActivity(new Intent(MainActivity.this, ReservationScreen.class));
+    public void setDateIn(View view) {
+        startActivity(new Intent(MainActivity.this, ReservationScreen.class));
     }
 
     ImageButton imageButton;
-    public void profileButton(View view){
-    imageButton = (ImageButton) findViewById(R.id.imageButton);
+
+    public void profileButton(View view) {
+        imageButton = (ImageButton) findViewById(R.id.imageButton);
         Intent intent = new Intent(MainActivity.this, EditProfile.class);
         startActivity(intent);
 
     }
 
-    RetrofitConfig retrofitConfig = new RetrofitConfig();
-    Call<List<Hotel>> call = retrofitConfig.getHotelService().getAllHotels();
-    call.enqueue(new Callback<List<Hotel>>(){
-        @Override
-        public void onResponse(Call<List<Hotel>> call, Response<List<Hotel>> response) {
-        List<Hotel> hotels = response.body();
-
-        String name = hotels.get(0).getName();
-        Toast.makeText(this, "Hotel" + name, Toast.LENGTH_LONG).show();
-        }
-
-        @Override
-        public void onFailure(Call<List<Hotel>> call, Throwable t){
-        Toast.makeText(MainActivity.this, "Hotel não encontrado", Toast.LENGTH_LONG).show();
-    }}
-    }
-
+}
 
 
 

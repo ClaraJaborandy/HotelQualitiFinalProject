@@ -1,10 +1,10 @@
 package com.example.hotelqualitifinalproject.service;
 
+import androidx.room.Update;
+
 import com.example.hotelqualitifinalproject.model.Hotel;
 import com.example.hotelqualitifinalproject.repository.HotelRepository;
-
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -14,15 +14,24 @@ import retrofit2.http.PATCH;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
 
-
-//import com.example.hotelqualitifinalproject.model.Hotel;
-//import com.example.hotelqualitifinalproject.repository.HotelRepository;
-
 public interface HotelService {
 
-    @GET("hotel")
-    Call<List<Hotel>> getAllHotels();
+    @GET("hotelRepository")
+    Call<List<Hotel>> findAllHotels();
 
-    @GET("hotel")
-    Call<Hotel> getHotel();
+    @GET("hotelRepository")
+    Call<List<Hotel>> findHotelById();
+
+    @POST("hotelRepository")
+    Call<List<Hotel>> saveHotel();
+
+    @Update
+    @PUT("hotelRepository")
+    Call<List<Hotel>> updateHotel();
+
+    @DELETE("HotelRepository")
+    Call<List<Hotel>> deleteHotelById();
+
+    @DELETE("HotelRepository")
+    Call<List<Hotel>> deleteAllHotel();
 }
