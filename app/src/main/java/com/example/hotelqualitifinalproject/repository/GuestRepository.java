@@ -3,6 +3,6 @@ import com.example.hotelqualitifinalproject.model.Guest;
 
 import java.util.List;
 
-//public interface GuestRepository {
+public class GuestRepository {
 //    List<Guest>.find(String name);
-//}
+}
