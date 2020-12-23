@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.hotelqualitifinalproject.model.RecentHotelsData;
@@ -18,6 +19,8 @@ public class DetailsActivity extends AppCompatActivity {
         RecentHotelsData hotel = (RecentHotelsData) getIntent().getSerializableExtra("identificadorHotel");
         TextView tv_title = findViewById(R.id.titlehotel);
         tv_title.setText(hotel.getNomeHotel());
+        ImageView hotelimg = findViewById(R.id.hotelimg);
+        hotelimg.setImageResource(hotel.getImageUrl());
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
@@ -25,5 +28,6 @@ public class DetailsActivity extends AppCompatActivity {
     public void telaDeReserva(View view){
         Intent intent = new Intent(this, ReservationScreen.class);
         startActivity(intent);
+        finish();
     }
 }

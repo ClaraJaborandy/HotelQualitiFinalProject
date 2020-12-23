@@ -18,22 +18,21 @@ import retrofit2.http.PUT;
 
 public interface GuestService {
 
-    @GET("GuestRepository")
+    @GET("guest")
     Call<List<Guest>> findAllGuest();
 
-    @GET("hotelRepository")
+    @GET("guest")
     Call<List<Guest>> findGuestById();
 
-    @POST("hotelRepository")
+    @POST("guest")
     Call<List<Guest>> saveGuest();
 
-    @Update
-    @POST("hotelRepository")
+    @POST("guest")
     Call<List<Guest>> updateGuest();
 
-    @DELETE("HotelRepository")
-    Call<List<Guest>> deleteGuesdtById();
+    @DELETE("guest")
+    Call<List<Guest>> deleteGuestById();
 
-    @DELETE("HotelRepository")
+    @DELETE("guest")
     Call<List<Guest>> deleteAllGuest();
 }

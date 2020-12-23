@@ -16,22 +16,21 @@ import retrofit2.http.PUT;
 
 public interface HotelService {
 
-    @GET("hotelRepository")
-    Call<List<Hotel>> findAllHotels();
+    @GET("/hotel/2")
+    Call<List<Hotel>> findAllHotel();
 
-    @GET("hotelRepository")
-    Call<List<Hotel>> findHotelById();
+    @GET("hotel")
+    Call<Hotel> findHotelById();
 
-    @POST("hotelRepository")
+    @POST("hotel")
     Call<List<Hotel>> saveHotel();
 
-    @Update
-    @POST("hotelRepository")
+    @POST("hotel")
     Call<List<Hotel>> updateHotel();
 
-    @DELETE("HotelRepository")
+    @DELETE("hotel")
     Call<List<Hotel>> deleteHotelById();
 
-    @DELETE("HotelRepository")
+    @DELETE("hotel")
     Call<List<Hotel>> deleteAllHotel();
 }

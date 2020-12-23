@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hotelqualitifinalproject">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -10,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HotelQualitiFinalProject">
         <!--
-            <activity android:name=".Finished" />
         <activity
             android:name=".CheapestHotel"
             android:label="@string/title_activity_cheapest_hotel">
@@ -26,9 +27,10 @@
         -->
         <activity android:name=".EditProfile" />
         <activity android:name=".RegisterPage" />
-        <activity android:name=".loginpage" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".ReservationOptions" />
         <activity android:name=".CheapestHotel"/>
+        <activity android:name=".Finished"/>
         <activity
             android:name=".ReservationScreenTwo"
             android:parentActivityName=".ReservationScreen" />
@@ -38,7 +40,7 @@
         <activity
             android:name=".DetailsActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".loginpage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

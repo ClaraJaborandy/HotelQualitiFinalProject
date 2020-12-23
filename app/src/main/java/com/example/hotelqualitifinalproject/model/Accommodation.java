@@ -57,14 +57,6 @@ public class Accommodation {
         this.valueReservation = valueReservation;
     }
 
-    public Accommodation(Long id, String startDay, String endDay, Double valueReservation) {
-        super();
-        this.id = id;
-        this.startDay = startDay;
-        this.endDay = endDay;
-        this.valueReservation = valueReservation;
-    }
-
     // ver
     @Override
     public String toString() {

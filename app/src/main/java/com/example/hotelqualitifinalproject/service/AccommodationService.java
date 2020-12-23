@@ -15,31 +15,30 @@ import retrofit2.http.POST;
 import retrofit2.http.PUT;
 
 public interface AccommodationService {
-    @GET("AccommodationRepository")
+    @GET("accommodation")
     Call<List<Accommodation>> findAllAccommodation();
 
-    @GET("AccommodationRepository")
+    @GET("accommodation")
     Call<List<Accommodation>> findAll();
 
-    @GET("AccommodationRepository")
+    @GET("accommodation")
     Call<List<Accommodation>> findAccommodationById();
 
-    @GET("AccommodationRepository")
+    @GET("accommodation")
     Call<List<Accommodation>> findAccommodationByGuest();
 
-    @GET("AccommodationRepository")
+    @GET("accommodation")
     Call<List<Accommodation>> findAccommodationByHotel();
 
-    @POST("AccommodationRepository")
+    @POST("accommodation")
     Call<List<Accommodation>> saveAccommodation();
 
-    @Update
-    @POST("AccommodationRepository")
+    @POST("accommodation")
     Call<List<Accommodation>> updateAccommodation();
 
-    @DELETE("AccommodationRepository")
+    @DELETE("accommodation")
     Call<List<Accommodation>> deleteAccommodationById();
 
-    @DELETE("AccommodationRepository")
+    @DELETE("accommodation")
     Call<List<Accommodation>> deleteAllAccommodation();
 }

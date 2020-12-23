@@ -4,18 +4,6 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 public class Hotel {
 
-    public Hotel(Long id, String name, String email, String telephone, Integer classification, Double priceWeekRegular, Double priceWeekFidelity, Double priceWeekendRegular, Double priceWeekendFidelity) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.telephone = telephone;
-        this.classification = classification;
-        this.priceWeekRegular = priceWeekRegular;
-        this.priceWeekFidelity = priceWeekFidelity;
-        this.priceWeekendRegular = priceWeekendRegular;
-        this.priceWeekendFidelity = priceWeekendFidelity;
-    }
-
     private Long id;
     private String name;
     private String email;

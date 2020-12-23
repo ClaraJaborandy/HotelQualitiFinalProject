@@ -14,8 +14,9 @@ public class ReservationOptions extends AppCompatActivity {
         setContentView(R.layout.activity_reservation_payment);
     }
 
-    public void clickTemp (View v) {
+    public void clickTemp2 (View v) {
         Intent intent = new Intent(this, Finished.class);
         startActivity(intent);
+        finish();
     }
 }

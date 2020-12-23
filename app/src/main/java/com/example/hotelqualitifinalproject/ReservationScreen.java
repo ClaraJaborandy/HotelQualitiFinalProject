@@ -34,5 +34,6 @@ public class ReservationScreen extends AppCompatActivity {
     }
     public void setDateOut (View v){
         startActivity(new Intent(ReservationScreen.this, ReservationScreenTwo.class));
+        finish();
     }
 }

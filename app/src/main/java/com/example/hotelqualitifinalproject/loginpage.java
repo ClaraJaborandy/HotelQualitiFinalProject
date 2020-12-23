@@ -40,7 +40,7 @@ public class loginpage extends AppCompatActivity {
     }
 
     public void reservationButton (View v) {
-        Intent intent = new Intent(this, ReservationOptions.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 }

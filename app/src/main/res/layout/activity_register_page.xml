@@ -57,6 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="60dp"
             android:text="Registrar"
+            android:onClick="clickRegister"
             app:layout_constraintBottom_toBottomOf="@+id/imageView4"
             app:layout_constraintEnd_toEndOf="@+id/imageView4"
             app:layout_constraintHorizontal_bias="0.497"

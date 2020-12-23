@@ -12,7 +12,7 @@ public class RetrofitConfig {
 
     public RetrofitConfig() {
         this.retrofit = new Retrofit.Builder()
-                .baseUrl("http://hotelrecode.herokuapp.com")
+                .baseUrl("http://hotelrecode.herokuapp.com/")
                 .addConverterFactory(JacksonConverterFactory.create())
                 .build();
     }

@@ -11,17 +11,6 @@ public class Guest {
     private String birthday;
     private String profile;
 
-    public Guest(Long id, String name, String cpf, String email, String telephone, String birthday, String profile) {
-        this.id = id;
-        this.name = name;
-        this.cpf = cpf;
-        this.email = email;
-        this.password =  password;
-        this.telephone = telephone;
-        this.birthday = birthday;
-        this.profile = profile;
-    }
-
     public Guest(){
     }
 

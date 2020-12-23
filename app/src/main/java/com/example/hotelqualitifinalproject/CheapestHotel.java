@@ -41,12 +41,14 @@ public class CheapestHotel extends AppCompatActivity {
         imageButton = (ImageButton) findViewById(R.id.imageButton);
         Intent intent = new Intent(CheapestHotel.this, EditProfile.class);
         startActivity(intent);
+        finish();
 
     }
 
     public void inputPersonalData (View view){
         Intent intent = new Intent(CheapestHotel.this, ReservationOptions.class);
         startActivity(intent);
+        finish();
     }
 
 

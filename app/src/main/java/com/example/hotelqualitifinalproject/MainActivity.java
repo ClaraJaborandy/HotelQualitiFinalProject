@@ -40,6 +40,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        RetrofitConfig retrofitConfig = new RetrofitConfig();
+        Call<List<Hotel>> call = retrofitConfig.getHotelService().findAllHotel();
+        call.enqueue(new Callback<List<Hotel>>() {
+            @Override
+            public void onResponse(Call<List<Hotel>> call, Response<List<Hotel>> response) {
+                List<Hotel> hotels = response.body();
+                String name = hotels.get(2).getName();
+                Toast.makeText(MainActivity.this, "Hotel" + name, Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onFailure(Call<List<Hotel>> call, Throwable t) {
+                Toast.makeText(MainActivity.this, "Hotel não encontrado", Toast.LENGTH_LONG).show();
+            }
+        });
+
         List<RecentHotelsData> recentHotelsDataList = new ArrayList<>();
         recentHotelsDataList.add(new RecentHotelsData("Mar Atlântico", "Tamandaré, PE", "Desde R$50 p/ noite", R.drawable.maratlantico));
         recentHotelsDataList.add(new RecentHotelsData("Jardim Botânico", "Gravatá, PE", "Desde R$60 p/ noite", R.drawable.jardimbotanico));

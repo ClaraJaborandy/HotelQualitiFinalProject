@@ -14,9 +14,10 @@ public class RegisterPage extends AppCompatActivity {
         setContentView(R.layout.activity_register_page);
     }
 
-    public void clickTemp (View v) {
-        Intent intent = new Intent(this, Finished.class);
+    public void clickRegister (View v) {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
 
 
