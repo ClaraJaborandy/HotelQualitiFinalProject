@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
     RecyclerView recentHotel;
     RecentHotelsAdapter recentHotelsAdapter;
-    ArrayList<Hotel> hotels;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<Hotel>> call, Response<List<Hotel>> response) {
                 List<Hotel> hotels = response.body();
-                String name = hotels.get(2).getName();
+                String name = hotels.get(0).getName();
                 Toast.makeText(MainActivity.this, "Hotel" + name, Toast.LENGTH_LONG).show();
             }
 

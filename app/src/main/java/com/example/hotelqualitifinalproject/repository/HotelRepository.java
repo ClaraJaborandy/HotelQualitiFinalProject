@@ -1,4 +1,4 @@
-package com.example.hotelqualitifinalproject.repository;
+//package com.example.hotelqualitifinalproject.repository;
 
-public class HotelRepository {
-}
+//public class HotelRepository {
+//}

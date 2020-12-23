@@ -1,5 +1,7 @@
 package com.example.hotelqualitifinalproject.model;
 
+import java.util.List;
+
 public class Guest {
 
     private Long id;
@@ -10,6 +12,16 @@ public class Guest {
     private String telephone;
     private String birthday;
     private String profile;
+
+    public List<Accommodation> getAccommodations() {
+        return accommodations;
+    }
+
+    public void setAccommodations(List<Accommodation> accommodations) {
+        this.accommodations = accommodations;
+    }
+
+    private List<Accommodation> accommodations;
 
     public Guest(){
     }

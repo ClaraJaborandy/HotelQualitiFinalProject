@@ -1,5 +1,7 @@
 package com.example.hotelqualitifinalproject.model;
 
+import java.util.List;
+
 public class Accommodation {
 
     private Long id;
@@ -8,6 +10,7 @@ public class Accommodation {
     private Double valueReservation;
     private Guest guest;
     private Hotel hotel;
+
 
     public Hotel getHotel() {
         return hotel;

@@ -18,9 +18,9 @@ public class CheapestHotel extends AppCompatActivity {
 
     ArrayList<Hoteis> listaHoteis = new ArrayList<>(
             Arrays.asList(
-                    new Hoteis("Qualiti Premium", "20211201", "20211203", 999.99, R.drawable.qualitipremium),
-                    new Hoteis("Jardim Botânico", "20211201", "20211203", 930.11, R.drawable.jardimbotanico),
-                    new Hoteis("Parque das Flores", "20211201", "20211203", 99.25, R.drawable.parquedasflores),
+                    new Hoteis("Qualiti Premium", "20211201", "20211203", 199.99, R.drawable.qualitipremium),
+                    new Hoteis("Jardim Botânico", "20211201", "20211203", 230.11, R.drawable.jardimbotanico),
+                    new Hoteis("Parque das Flores", "20211201", "20211203", 299.25, R.drawable.parquedasflores),
                     new Hoteis("Mar Atlântico", "20211201", "20211203", 320.61, R.drawable.maratlantico)
             ));
 
