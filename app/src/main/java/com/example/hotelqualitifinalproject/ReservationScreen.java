@@ -24,13 +24,13 @@ public class ReservationScreen extends AppCompatActivity {
         calendarView1 = (CalendarView) findViewById(R.id.startDate);
         textView6 = (TextView) findViewById(R.id.textView6);
 
-        calendarView1.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+        /*calendarView1.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView calendarView, int i, int i1, int i2) {
                 String date = (i1 + 1) + "/" + i2 + "/" + i;
                 textView6.setText(date);
             }
-        });
+        });*/
     }
     public void setDateOut (View v){
         startActivity(new Intent(ReservationScreen.this, ReservationScreenTwo.class));

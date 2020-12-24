@@ -2,6 +2,8 @@ package com.example.hotelqualitifinalproject.model;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
+import java.util.List;
+
 public class Hotel {
 
     private Long id;
@@ -13,6 +15,18 @@ public class Hotel {
     private Double priceWeekFidelity;
     private Double priceWeekendRegular;
     private Double priceWeekendFidelity;
+
+    public List<Accommodation> getAccommodations() {
+        return accommodations;
+    }
+
+    public void setAccommodations(List<Accommodation> accommodations) {
+        this.accommodations = accommodations;
+    }
+
+    private List<Accommodation> accommodations;
+
+
 
     public Hotel() {
     }

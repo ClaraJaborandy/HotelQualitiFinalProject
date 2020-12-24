@@ -46,9 +46,8 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<List<Hotel>> call, Response<List<Hotel>> response) {
                 List<Hotel> hotels = response.body();
                 String name = hotels.get(0).getName();
-                Toast.makeText(MainActivity.this, "Hotel" + name, Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Bem vindo de volta!", Toast.LENGTH_LONG).show();
             }
-
             @Override
             public void onFailure(Call<List<Hotel>> call, Throwable t) {
                 Toast.makeText(MainActivity.this, "Hotel não encontrado", Toast.LENGTH_LONG).show();

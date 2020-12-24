@@ -13,16 +13,6 @@ public class Guest {
     private String birthday;
     private String profile;
 
-    public List<Accommodation> getAccommodations() {
-        return accommodations;
-    }
-
-    public void setAccommodations(List<Accommodation> accommodations) {
-        this.accommodations = accommodations;
-    }
-
-    private List<Accommodation> accommodations;
-
     public Guest(){
     }
 
